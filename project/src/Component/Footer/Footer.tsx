@@ -1,4 +1,7 @@
 import './styles.sass'
+import tg from './image/telegram.png'
+import whats from './image/whatsapp.png'
+import vk from './image/VK.com-logo.svg'
 const Footer = () => {
     return (
         <div className={'Footer'}>
@@ -13,6 +16,11 @@ const Footer = () => {
 
             <div>
                 Связь в соц сетях
+                <div className='img-class'>
+                    <img className='img' src={tg} alt={'*'}/>
+                    <img className='img' src={whats} alt={'*'}/>
+                {/*<svg className='img' src={vk}/>*/}
+                </div>
             </div>
         </div>
     )

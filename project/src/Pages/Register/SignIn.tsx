@@ -1,7 +1,6 @@
 import {useState} from "react";
 import './styles.sass'
-
-export const SignIn = () => {
+const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -33,3 +32,4 @@ export const SignIn = () => {
         </div>
     );
 };
+export default SignIn
