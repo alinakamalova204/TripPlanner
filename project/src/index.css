@@ -1,0 +1,183 @@
+/*.App {*/
+/*  text-align: center;*/
+/*}*/
+
+/*.App-logo {*/
+/*  height: 40vmin;*/
+/*  pointer-events: none;*/
+/*}*/
+
+/*@media (prefers-reduced-motion: no-preference) {*/
+/*  .App-logo {*/
+/*    animation: App-logo-spin infinite 20s linear;*/
+/*  }*/
+/*}*/
+
+/*.App-header {*/
+/*  background-color: #b5b5e3;*/
+/*  min-height: 100vh;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  font-size: calc(10px + 2vmin);*/
+/*  color: white;*/
+/*}*/
+
+/*.App-link {*/
+/*  color: #61dafb;*/
+/*}*/
+
+/*@keyframes App-logo-spin {*/
+/*  from {*/
+/*    transform: rotate(0deg);*/
+/*  }*/
+/*  to {*/
+/*    transform: rotate(360deg);*/
+/*  }*/
+/*}*/
+
+.App {
+    background-color: #F0F9EF;
+}
+/* Normalize CSS */
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+pre,
+blockquote,
+dl,
+dd,
+dt,
+p,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+em,
+font,
+ins,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+center,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/* Normalize links */
+a {
+    background: transparent;
+}
+
+/* Remove dotted outline */
+a:focus {
+    outline: 0;
+}
+
+/* Reset list styles */
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default padding */
+button,
+input,
+select,
+textarea {
+    margin: 0;
+}
+
+/* Remove default button styling */
+button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default text-decoration */
+a {
+    text-decoration: none;
+}
