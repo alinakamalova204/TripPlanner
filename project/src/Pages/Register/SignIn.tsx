@@ -1,5 +1,8 @@
 import {useState} from "react";
-import './styles.sass'
+import './styles.module.sass'
+import styles from "./styles.module.sass";
+import {Link} from "react-router-dom";
+import Header from "../../Component/Header";
 const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -10,16 +13,18 @@ const SignIn = () => {
     }
 
     return (
-        <div className={'form-reg'}>
-            <h1>Вход в систему</h1>
-            <form onSubmit={handleSubmit}>
+        <>
+        <Header/>
+        <div className={styles.formContainer}>
+            <h1 className={styles.title}>Вход в систему</h1>
+            <form className={styles.form} onSubmit={handleSubmit}>
 
-                <input type={'text'} name={'email'} value={email}
+                <input className={styles.input} type={'text'} name={'email'} value={email}
                        onChange={(e) => setEmail(e.target.value)}
                        placeholder={'Введите email'}
                 />
 
-                <input type={'text'} name={'password'} value={password}
+                <input className={styles.input} type={'text'} name={'password'} value={password}
                        onChange={(e) => setPassword(e.target.value)}
                        placeholder={'Введите пароль'}
                 />
@@ -27,9 +32,14 @@ const SignIn = () => {
                 <br/>
             </form>
             <br/>
-            <button>Войти</button>
-            <h5>Нет аккаунта? <a href={'*'}>Зарегистрироваться</a></h5>
+            <Link to={'/Plans'}>
+                <button className={styles.button}>Войти</button>
+            </Link>
+            <h5 className={styles.info}>Нет аккаунта? <Link to={"/signup"} className={styles.link}>Зарегистрироваться</Link>
+
+            </h5>
         </div>
+            </>
     );
 };
 export default SignIn

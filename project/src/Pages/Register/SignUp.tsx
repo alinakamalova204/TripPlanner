@@ -1,6 +1,9 @@
 import {useState} from "react";
-import './styles.sass'
+import styles from  './styles.module.sass'
 import axios from "axios";
+import {Link} from "react-router-dom";
+import Header from "../../Component/Header";
+import Footer from "../../Component/Footer";
 
 export const SignUp = () => {
     const [username, setUsername] = useState('');
@@ -20,33 +23,35 @@ export const SignUp = () => {
         }
     }
 
-    const handleChange = (event: { target: { name: any; value: any; }; }) => {
-        const { name, value } = event.target;
-        setFormData({ ...formData, [name]: value });
-    };
+    // const handleChange = (event: { target: { name: any; value: any; }; }) => {
+    //     const { name, value } = event.target;
+    //     setFormData({ ...formData, [name]: value });
+    // };
     return (
-        <div className={'form-reg'}>
-            <h1>Регистрация</h1>
-            <form onSubmit={handleSubmit}>
-                <input type={'text'} name={'username'} value={username}
+        <>
+            <Header/>
+        <div className={styles.formContainer}>
+            <h1 className={styles.title}>Регистрация</h1>
+            <form className={styles.form} onSubmit={handleSubmit}>
+                <input className={styles.input} type={'text'} name={'username'} value={username}
                     onChange={(e) => setUsername(e.target.value)}
                        // onChange={handleChange}
                        placeholder={'Введите имя'}
                 />
 
-                <input type={'text'} name={'email'} value={email}
+                <input className={styles.input} type={'text'} name={'email'} value={email}
                        onChange={(e) => setEmail(e.target.value)}
                        // onChange={handleChange}
                        placeholder={'Введите email'}
                 />
 
-                <input type={'password'} name={'password'} value={password}
+                <input className={styles.input} type={'password'} name={'password'} value={password}
                        onChange={(e) => setPassword(e.target.value)}
                        // onChange={handleChange}
                        placeholder={'Введите пароль'}
                 />
 
-                <input type={'password'} name={'confirm_password'} value={confirmPassword}
+                <input className={styles.input} type={'password'} name={'confirm_password'} value={confirmPassword}
                        onChange={(e) => setConfirmPassword(e.target.value)}
                        // onChange={handleChange}
                        placeholder={'Повторите пароль'}
@@ -54,8 +59,12 @@ export const SignUp = () => {
                 <br/>
             </form>
             <br/>
-            <button>Зарегистрироваться</button>
-            <h5>Уже есть аккаунт? <a href={'*'}>Войти</a></h5>
+            <Link to={'/signIn'}>
+            <button className={styles.button}>Зарегистрироваться</button>
+            </Link>
+            <h5 className={styles.info}>Уже есть аккаунт? <Link to={"/signin"} className={styles.link}>Войти</Link></h5>
         </div>
+            <Footer/>
+        </>
     );
 };
