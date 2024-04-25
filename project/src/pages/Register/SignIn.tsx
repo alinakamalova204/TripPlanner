@@ -2,7 +2,7 @@ import {useState} from "react";
 import './styles.module.sass'
 import styles from "./styles.module.sass";
 import {Link} from "react-router-dom";
-import Header from "../../Component/Header";
+import Header from "../../component/Header";
 const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -32,7 +32,7 @@ const SignIn = () => {
                 <br/>
             </form>
             <br/>
-            <Link to={'/Plans'}>
+            <Link to={'/Index'}>
                 <button className={styles.button}>Войти</button>
             </Link>
             <h5 className={styles.info}>Нет аккаунта? <Link to={"/signup"} className={styles.link}>Зарегистрироваться</Link>

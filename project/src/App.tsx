@@ -1,15 +1,16 @@
 import React from 'react';
 import './index.css';
 // import { Switch } from 'react-router';
-import Index from "./Pages/Home";
-import Home from "./Pages/Home";
+import Index from "./pages/Home";
+import Home from "./pages/Home";
 import {BrowserRouter, createBrowserRouter, Route, Routes} from "react-router-dom";
-import SignIn from "./Pages/Register/SignIn";
-import {SignUp} from "./Pages/Register/SignUp";
-import Plans from "./Pages/Plans/Plans";
-import NotFound from "./Pages/NotFound";
-import AllCountries from "./Pages/AllCountries";
-import Cities from "./Pages/Cities";
+import SignIn from "./pages/Register/SignIn";
+import {SignUp} from "./pages/Register/SignUp";
+import Plans from "./pages/Plans";
+import NotFound from "./pages/NotFound";
+import AllCountries from "./pages/AllCountries";
+import Cities from "./pages/Cities";
+import About from "./pages/About";
 
 
 const router = createBrowserRouter([
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/plans",
-        element: <Plans/>
+        element: <Index/>
     },
     {
         path: "/*",
@@ -53,10 +54,11 @@ function App() {
                     <Route path="/" Component={Home} />
                     <Route path="/plans" Component={Plans} />
                     <Route path="/allcountries" Component={AllCountries} />
-                    <Route path="/allcountries/:id/cities" Component={Cities} />
+                    <Route path="/cities/:countryId" Component={Cities} />
                     <Route path="/signin" Component={SignIn} />
                     <Route path="/signup" Component={SignUp} />
                     <Route path="/*" Component={NotFound}/>
+                    <Route path="about" Component={About}/>
                 </Routes>
             </div>
         </BrowserRouter>

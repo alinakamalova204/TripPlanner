@@ -1,7 +1,7 @@
 // import {useEffect, useState} from "react";
 // import axios from "axios";
 //
-// const PopularDestinations = () => {
+// const Index = () => {
 //     const [image, setImage] = useState('');
 //     const [title, setTitle] = useState('');
 //
@@ -23,13 +23,13 @@
 //         </div>
 //     );
 // }
-// export default PopularDestinations
+// export default Index
 
 // import React from 'react';
 // import styles from './styles.module.sass'
 // import {popularDestinations} from "./data";
 // import Swiper from "swiper";
-// const PopularDestinations: React.FC = () => {
+// const Index: React.FC = () => {
 //     const gallerySlider = new Swiper('.gallery', {
 //         slidesPerView: 1,
 //         spaceBetween: 10,
@@ -55,39 +55,52 @@
 //     );
 // }
 //
-// export default PopularDestinations;
+// export default Index;
 
 
-import React, { useEffect } from 'react';
-import Swiper from 'swiper';
+import React from 'react';
 import styles from './styles.module.sass'
 import {popularDestinations} from "./data";
-
-const PopularDestinations = () => {
-    useEffect(() => {
-        new Swiper('.swiper-container', {
-            // параметры Swiper здесь
-            slidesPerView: 'auto',
-            spaceBetween: 10,
-        });
-    }, []);
-
+import {Link} from "react-router-dom";
+const PopularDestination = () => {
+    // return (
+        // <Swiper
+        //     spaceBetween={50}
+        //     slideperview={3}
+        //     onSlideChange={() => console.log('change')}
+        //     onSwiper={(swiper: any) => console.log(swiper)}
+        //     >
+        //     {/*{slides.map((slide) =>)}*/}
+        //     <SwiperSlide>Slide1</SwiperSlide>
+        //     <SwiperSlide>Slide2</SwiperSlide>
+        //     <SwiperSlide>Slide3</SwiperSlide>
+        //     <SwiperSlide>Slide4</SwiperSlide>
+        // </Swiper>
+    // )
+    // useEffect(() => {
+    //     new Swiper('.swiper-container', {
+    //         // параметры Swiper здесь
+    //         slidesPerView: 'auto',
+    //         spaceBetween: 10,
+    //     });
+    // }, []);
+    //
     return (
         <div className={styles.galleryAll}>
             <h2>Популярные направления</h2>
             <div className={styles.swiper_container}>
-                <div className={styles.swiper_wrapper}>
-                    {popularDestinations.map((destination, index: number) => (
+                {popularDestinations.map((destination, index: number) => (
+                    <Link to={`./cities/${destination.id}`} key={index}>
                         <div className={styles.swiper_slide} key={index}>
                             <img className={styles.image} src={destination.image} alt={destination.country} />
                             <p className={styles.title}>{destination.country}</p>
                         </div>
-                    ))}
-                </div>
+                    </Link>
+                ))}
             </div>
         </div>
     );
 };
 
 
-export default PopularDestinations
+export default PopularDestination

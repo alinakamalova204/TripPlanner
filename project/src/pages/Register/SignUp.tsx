@@ -2,8 +2,8 @@ import {useState} from "react";
 import styles from  './styles.module.sass'
 import axios from "axios";
 import {Link} from "react-router-dom";
-import Header from "../../Component/Header";
-import Footer from "../../Component/Footer";
+import Header from "../../component/Header";
+import Footer from "../../component/Footer";
 
 export const SignUp = () => {
     const [username, setUsername] = useState('');

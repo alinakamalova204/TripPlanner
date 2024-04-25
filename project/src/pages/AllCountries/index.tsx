@@ -1,8 +1,8 @@
-import Footer from "../../Component/Footer";
-import {allCountries} from "./data";
+import Footer from "../../component/Footer";
 import styles from './styles.module.sass'
 import {Link} from "react-router-dom";
-import Header from "../../Component/Header";
+import Header from "../../component/Header";
+import {allCountries} from "./data";
 
 const AllCountries = () => {
 

@@ -1,7 +1,7 @@
-import Footer from "../../Component/Footer";
+import Footer from "../../component/Footer";
 import maldives from './../../assets/image/maldivesjpg.jpg'
 import styles from './styles.module.sass'
-import Header from "../../Component/Header";
+import Header from "../../component/Header";
 const Plans = () => {
     return (
         <div>

@@ -1,5 +1,6 @@
 import styles from './index.module.sass'
 import {FaTelegram, FaVk, FaWhatsapp, FaYoutube} from "react-icons/fa";
+import {Link} from "react-router-dom";
 // import {  FaFacebook, FaTwitter, FaInstagram } from 'react-icons';
 const Footer = () => {
     return (
@@ -7,15 +8,15 @@ const Footer = () => {
             <div className={styles.column}>
                 <h4>Ваш аккаунт</h4>
                 <ul>
-                    <li>Регистрация</li>
-                    <li>Войти</li>
+                    <Link to={'/signUp'}><li>Регистрация</li></Link>
+                    <Link to={'/signIn'}><li>Войти</li></Link>
                 </ul>
             </div>
             <div className={styles.column}>
                 <h4>Разделы</h4>
                 <ul>
-                    <li>О нас</li>
-                    <li>Служба поддержки</li>
+                    <Link to={'/about'}><li>О нас</li></Link>
+                    <Link to={'https://www.google.com/intl/ru/gmail/about/'}><li>Служба поддержки</li></Link>
                 </ul>
             </div>
             <div className={styles.column}>

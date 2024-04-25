@@ -5,10 +5,10 @@ import uae from './../../assets/image/uae.jpg'
 import cuba from "../../assets/image/cubajpg.jpg";
 import egipet from "../../assets/image/egipet.jpg";
 export const popularDestinations = [
-    { country: 'Япония', image: japan },
-    { country: 'Турция', image: turkish },
-    { country: 'Таиланд', image: tailand },
-    { country: 'ОАЭ', image: uae},
-    { country: 'Куба', image: cuba },
-    { country: 'Египет', image: egipet }
+    { id: 'jap', country: 'Япония', image: japan },
+    { id: 'jap', country: 'Турция', image: turkish },
+    { id: 'jap', country: 'Таиланд', image: tailand },
+    { id: 'jap', country: 'ОАЭ', image: uae},
+    { id: 'jap', country: 'Куба', image: cuba },
+    { id: 'jap', country: 'Египет', image: egipet }
 ];
