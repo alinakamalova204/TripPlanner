@@ -38,7 +38,9 @@
 /*}*/
 
 .App {
-    background-color: #F0F9EF;
+    background-color: #d3e4f8;
+    margin: 0;
+    height: auto;
 }
 /* Normalize CSS */
 html,

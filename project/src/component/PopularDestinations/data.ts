@@ -6,9 +6,9 @@ import cuba from "../../assets/image/cubajpg.jpg";
 import egipet from "../../assets/image/egipet.jpg";
 export const popularDestinations = [
     { id: 'jap', country: 'Япония', image: japan },
-    { id: 'jap', country: 'Турция', image: turkish },
-    { id: 'jap', country: 'Таиланд', image: tailand },
-    { id: 'jap', country: 'ОАЭ', image: uae},
-    { id: 'jap', country: 'Куба', image: cuba },
-    { id: 'jap', country: 'Египет', image: egipet }
+    { id: 'tur', country: 'Турция', image: turkish },
+    { id: 'tai', country: 'Таиланд', image: tailand },
+    { id: 'uae', country: 'ОАЭ', image: uae},
+    { id: 'cuba', country: 'Куба', image: cuba },
+    { id: 'egp', country: 'Египет', image: egipet }
 ];

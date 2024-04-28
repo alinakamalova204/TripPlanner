@@ -1,6 +1,7 @@
 import styles from './index.module.sass'
-import {FaTelegram, FaVk, FaWhatsapp, FaYoutube} from "react-icons/fa";
+import {FaTelegram, FaVk, FaWhatsapp, FaYoutube, FaEnvelope} from "react-icons/fa";
 import {Link} from "react-router-dom";
+import {FaA} from "react-icons/fa6";
 // import {  FaFacebook, FaTwitter, FaInstagram } from 'react-icons';
 const Footer = () => {
     return (
@@ -22,6 +23,7 @@ const Footer = () => {
             <div className={styles.column}>
                 <h4>Связь в соцсетях</h4>
                 <div className={styles.socialIcons}>
+
                     <a href={'https://web.telegram.org'}><FaTelegram className={styles.icon}/></a>
                     <a href={'https://www.whatsapp.com'}><FaWhatsapp className={styles.icon}/></a>
                     <a href={'https://www.vk.com'}><FaVk className={styles.icon}/></a>

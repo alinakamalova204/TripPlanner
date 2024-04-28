@@ -3,9 +3,9 @@ import {allCountries} from "../AllCountries/data";
 import Calendar from "../../component/Calendar";
 
 const Cities = (props: any) => {
-    const { id } = useParams(); // Получаем ID страны из URL
+    const { countryId } = useParams(); // Получаем ID страны из URL
     // const id = props.match.params.id;
-    const selectedCountry = allCountries.find(country => country.id === id); // Находим страну по ID
+    const selectedCountry = allCountries.find(country => country.id === countryId); // Находим страну по ID
 
     return (
         <>

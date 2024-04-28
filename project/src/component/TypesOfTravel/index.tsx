@@ -10,7 +10,12 @@ const TypesOfTravel = () => {
         { type: 'Горный', image: mountain },
         { type: 'Культурно-исторический', image: culture },
         { type: 'Лечебно-оздоровительный', image: spa },
-        { type: 'Зимний', image: winter }
+        { type: 'Зимний', image: winter },
+        { type: 'Пляжный', image: beach },
+        { type: 'Горный', image: mountain },
+        { type: 'Культурно-исторический', image: culture },
+        { type: 'Лечебно-оздоровительный', image: spa },
+        { type: 'Зимний', image: winter },
     ];
 
     return (
