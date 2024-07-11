@@ -1,16 +1,44 @@
+//.card
+//  display: flex
+//  justify-content: space-between
+//  align-items: flex-start
+//  border-radius: 5px
+//  background-color: #b8ecff
+//  margin: 5px
+//
+//  .details
+//    margin-left: 10px
+//
+//  .img
+//    margin-right: 10px
+//    margin-bottom: 20px
+//    margin-top: 20px
+//    max-width: 200px
 .card
   display: flex
   justify-content: space-between
-  align-items: flex-start
-  border-radius: 5px
-  background-color: #b8ecff
-  margin: 5px
+  align-items: center
+  background-color: #fff
+  border-radius: 10px
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+  overflow: hidden
+  margin: 20px
+  transition: transform 0.3s, box-shadow 0.3s
+
+  &:hover
+    transform: scale(1.05)
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
 
   .details
-    margin-left: 10px
+    padding: 20px
+    text-align: left
+    width: 100%
+
+    p
+      margin: 5px 0
+      font-size: 16px
+      color: #333
 
   .img
-    margin-right: 10px
-    margin-bottom: 20px
-    margin-top: 20px
-    max-width: 200px
+    width: auto
+    height: 200px

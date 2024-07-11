@@ -1,29 +1,54 @@
-import {useParams} from "react-router-dom";
-import {allCountries} from "../AllCountries/data";
-import Calendar from "../../component/Calendar";
+import { Link, useParams } from "react-router-dom";
+import { allCountries } from "../AllCountries/data";
+import styles from './styles.module.sass';
+import Header from "../../component/Header";
+import Footer from "../../component/Footer";
 
-const Cities = (props: any) => {
-    const { countryId } = useParams(); // Получаем ID страны из URL
-    // const id = props.match.params.id;
-    const selectedCountry = allCountries.find(country => country.id === countryId); // Находим страну по ID
+interface City {
+    id: string;
+    name: string;
+    imageCity: string;
+    description?: string;
+}
+
+interface Country {
+    id: string;
+    country: string;
+    image: string;
+    cities: City[];
+}
+const Cities = () => {
+    const { countryId } = useParams();
+    const selectedCountry: Country|undefined= allCountries.find(country => country.id === countryId);
+
+    if (!selectedCountry) {
+        return <div>Страна не найдена</div>;
+    }
 
     return (
-        <>
-            {selectedCountry && (
-                <div>
-                    <h2>{selectedCountry.country}</h2>
-                    {selectedCountry && selectedCountry.cities && selectedCountry.cities.map(city => (
-                        <div key={city.id}>
-                            <img src={city.imageCity} alt={city.name} />
-                            <p>{city.name}</p>
-                            <p>Helllloooo</p>
-                        </div>
-                    ))}
-                </div>
-            )}
-            {/*<Calendar/>*/}
-        </>
+        <div>
+            <Header />
+            <div className={styles.container}>
+                <h1 className={styles.h1}>{selectedCountry?.country}</h1>
+                {selectedCountry && (
+                    <div className={styles.cities}>
+                        {selectedCountry.cities && selectedCountry.cities.map(({ id, name, imageCity, description }) => (
+                            <Link to={`./city/${id}`} key={id}>
+                                <div className={styles.city}>
+                                    <img src={imageCity} alt={name} />
+                                    <div className={styles.cityInfo}>
+                                        <p>{name}</p>
+                                        {description && <span>{description}</span>}
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                )}
+            </div>
+            <Footer/>
+        </div>
     );
 };
 
-export default Cities
+export default Cities;

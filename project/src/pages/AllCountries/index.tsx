@@ -6,10 +6,6 @@ import {allCountries} from "./data";
 
 const AllCountries = () => {
 
-    function scrollToTop() {
-        window.scrollTo(0, 0);
-    }
-
     return (
         <div className={styles.page}>
             <Header/>

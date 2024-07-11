@@ -1,22 +1,63 @@
-.container
-  //max-width: 800px
+.text
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 20px
+  max-width: 1200px
   margin: 0 auto
 
-  h2
-    float: left
-    width: 30%
-    color: #333333
-    font-size: 24px
-    margin-bottom: 16px
-    text-align: center
-    margin-top: 7px
 
-  .slogan
-    float: right
-    width: 60%
-    border: 1px solid #1565c4
-    display: block
-    text-align: justify
-    text-justify: inter-word
-    font-size: 16px
-    margin-right: 10px
+.points
+  display: flex
+  align-items: flex-start
+  margin-bottom: 40px
+  @media (max-width: 768px)
+  flex-direction: column
+  align-items: center
+  text-align: center
+
+
+
+.image_wrapper
+  flex: 1
+  max-width: 300px
+  margin-right: 20px
+  @media (max-width: 768px)
+  margin-right: 0
+  margin-bottom: 20px
+
+
+
+.image
+  width: 100%
+  height: auto
+  border-radius: 10px
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+
+
+.text_wrapper
+  flex: 2
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+
+.h2
+  font-size: 24px
+  font-weight: bold
+  margin-bottom: 10px
+  color: #333
+
+
+.slogan
+  font-size: 16px
+  line-height: 1.5
+  color: #666
+
+
+@media (max-width: 768px)
+.h2
+  font-size: 20px
+
+.slogan
+  font-size: 14px

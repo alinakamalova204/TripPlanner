@@ -1,0 +1,44 @@
+.galleryAll
+  align-items: center
+  overflow-y: auto
+  display: flex
+  flex-wrap: wrap
+  gap: 10px
+  background-color: #cccccc
+  border-radius: 5px
+  margin: 10px
+
+
+  .gallery
+    display: flex
+
+    .item
+      flex: 1 1 500px
+      list-style: none
+      margin: 10px
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+      border-radius: 5px
+      overflow: hidden
+      background-color: #cccccc
+      //padding: 10px
+      //box-sizing: border-box
+      //text-align: center
+
+      .image
+        height: auto
+        display: block
+        min-height: 200px
+        min-width: 200px
+        max-width: 200px
+        max-height: 200px
+        object-fit: cover
+
+
+      .title
+        margin-top: 10px
+        font-weight: bold
+        font-size: 1rem
+        color: #fff
+        background-color: rgba(0, 0, 0, 0.5)
+        text-transform: uppercase
+

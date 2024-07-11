@@ -1,10 +1,10 @@
-import './styles.module.sass'
-import promo from './../../assets/image/promo.jpg'
+import styles from './styles.module.sass'
 const Promo = () => {
     return (
-        <div style={{ backgroundImage: promo, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: '100%' }}>
-            <h1>Путешествие</h1>
-            <button>Начать искать</button>
+        <div className={styles.container}>
+            <h1>Планируйте свое незабываемое приключение с нами!</h1>
+            <p>Откройте для себя новые места, испытайте незабываемые впечатления и создайте лучшие воспоминания.</p>
+
         </div>
     )
 }

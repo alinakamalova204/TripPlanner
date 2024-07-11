@@ -3,22 +3,27 @@
   justify-content: space-between
   background-color: #d3e4f8
   width: 100%
-  height: max-content
+  height: 100vh
+
   .logo
     display: flex
     justify-content: center
     align-items: center
     flex-direction: column
-    margin-left: 15px
+    margin-left: 60px
 
   .formContainer
-    width: 300px
+    width: 350px
     margin: 80px auto 150px
     padding: 20px
     background-color: #ffffff
     border-radius: 10px
     align-items: center
     justify-content: center
+    height: 350px
+    //&[style='height: 500px']
+    //  height: 500px
+
 
     .title
       font-size: 24px
@@ -26,34 +31,44 @@
       margin-bottom: 20px
 
     .form
-      display: flex
+      //display: flex
       flex-direction: column
+      height: 60%
       background-color: white
 
       .input
-        margin-bottom: 10px
-        padding: 10px
-        border: 1px solid #ccc
+        width: 100%
+        margin-bottom: 5px
+        box-sizing: border-box
+        padding: 5px
         border-radius: 5px
+        background-image: '@mui/icons-material'
 
-    .button
-      display: flex
-      position: relative
-      left: 50%
-      transform: translate(-50%, 0)
-      background-color: teal
-      color: white
-      padding: 10px 20px
-      border: none
-      border-radius: 5px
-      cursor: pointer
+      .error
+        color: red
+
+      .button
+        display: flex
+        //position: absolute
+        //left: 50%
+        margin: 0 auto
+        text-align: center
+        height: 2rem
+        font-size: 20px
+        //transform: translate(-50%, 0)
+        background-color: teal
+        color: white
+        padding: 10px 20px
+        border: none
+        border-radius: 5px
+        cursor: pointer
 
     .button:hover
       background-color: #76c1e0
 
     .info
       text-align: center
-      margin-top: 20px
+      margin-top: 15px
 
     .link_btn
       color: white

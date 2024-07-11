@@ -1,32 +1,57 @@
 .header
   display: flex
+  height: 70px
   background-color: #d3e4f8
-  //width: 100%
   justify-content: space-between
+
   .header__logo
-    justify-content: center
-    display: inline
-    margin: 13px
+    align-items: center
+    display: flex
+    margin: 0 20px
+
+    span
+      align-items: center
+      margin-right: 20px
+      display: flex
+      list-style-type: none
+      margin-left: 10px
+      margin-top: 2px
+      font-size: xx-large
+      color: black
 
   .header__nav
-    display: flex
-    justify-content: center
+    display: inline
     align-items: center
-    margin-right: 10px
+    margin: 0 20px
+
     ul
       list-style: none
-      display: flex
-      margin-left: 10px
-      left: 50px
+      align-items: center
+      margin-top: 20px
+
       .links-container
         display: flex
         align-items: center
         list-style-type: none
         margin-left: 10px
-        margin-bottom: 5px
-        link
+
+        .link
+          background-color: white
           color: black
           text-decoration: none
+
+          .span
+            align-items: center
+            margin-right: 20px
+            display: flex
+            list-style-type: none
+            margin-left: 10px
+            margin-top: 20px
+            font-size: medium
+            color: black
+
+        .link:hover
+          color: #007bff
 
   .header__nav li > a + a
     margin-left: 10px

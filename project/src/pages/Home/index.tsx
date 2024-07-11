@@ -4,17 +4,20 @@ import TypesOfTravel from "../../component/TypesOfTravel";
 import Header from "../../component/Header";
 import PopularDestination from "../../component/PopularDestinations";
 import Promo from "../../component/Promo";
+import styles from './styles.module.sass'
 
 
 const Home = () => {
     return (
         <div>
-            <Header/>
+            <Header className={styles.header}/>
             <Promo/>
             <PopularDestination/>
-            <Link to="/allcountries">
-                <button type="button">Посмотреть все страны</button>
-            </Link>
+            <div className={styles.container}>
+                <Link to="/allcountries">
+                    <button className={styles.btn} type="button">Посмотреть все страны</button>
+                </Link>
+            </div>
             <TypesOfTravel/>
             {/*<MapComponent/>*/}
             <Footer/>
